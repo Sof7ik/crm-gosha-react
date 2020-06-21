@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div.brandWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #848484;
+  margin-right: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 0.3rem;
+}
+div.brandWrapper img {
+  width: 100px;
+}
+div.brandWrapper span {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 16px;
+  margin-top: 10px;
+}

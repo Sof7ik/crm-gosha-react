@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@mixin flex ($ff, $jc, $ai) {
+    display: flex;
+    flex-flow: $ff;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin grid ($gtr, $gtc, $gg) {
+    display: grid;
+    grid-template-rows: $gtr;
+    grid-template-columns: $gtc;
+    grid-gap: $gg;
+}
+
+div.brandsPageWrapper
+{
+    @include flex(column nowrap, flex-start, flex-start);
+}
+
+div.brandsWrapper
+{
+    @include flex(row wrap, flex-start, flex-start);
+
+    // overflow-y: scroll;
+}

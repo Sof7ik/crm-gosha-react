@@ -1,0 +1,26 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div.content {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 8fr;
+  grid-gap: 0px;
+}
+
+div.contentWrapper {
+  background-color: #D6D6D6;
+  padding: 10px;
+  display: flex;
+}

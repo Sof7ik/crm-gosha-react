@@ -1,0 +1,55 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@mixin flex ($ff, $jc, $ai) {
+    display: flex;
+    flex-flow: $ff;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin grid ($gtr, $gtc, $gg) {
+    display: grid;
+    grid-template-rows: $gtr;
+    grid-template-columns: $gtc;
+    grid-gap: $gg;
+}
+
+div.descWrapper
+{
+    @include flex(column nowrap, flex-start, center);
+
+    margin-top: 15px;
+    width: inherit;
+}
+
+p.descName
+{
+    text-transform: uppercase;
+    text-align: center;
+    color: #8B8B8B;
+}
+
+p.descValue
+{
+    background-color: #c4c4c4;
+    padding: 5px;
+    width: inherit;
+    text-align: center;
+}
+
+p.descName, p.descValue
+{
+    font-family: 'Roboto', sans-serif;
+}

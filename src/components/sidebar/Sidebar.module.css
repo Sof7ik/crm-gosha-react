@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav.nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #373737;
+  height: 100%;
+}
+nav.nav a.menuItem {
+  display: block;
+  background-color: #6B6B6B;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+nav.nav a.menuItem:last-of-type {
+  padding: 20px;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+nav.nav a.menuItemActive {
+  background-color: #23A3FF;
+}

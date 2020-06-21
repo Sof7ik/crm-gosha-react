@@ -1,0 +1,53 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@mixin flex ($ff, $jc, $ai) {
+    display: flex;
+    flex-flow: $ff;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin grid ($gtr, $gtc, $gg) {
+    display: grid;
+    grid-template-rows: $gtr;
+    grid-template-columns: $gtc;
+    grid-gap: $gg;
+}
+
+div.brandWrapper
+{
+    @include flex(column nowrap, flex-start, center);
+    background-color: #848484;
+
+    margin-right: 15px;
+    margin-top: 15px;
+    
+    padding: 10px;
+    border-radius: 0.3rem;
+
+    img
+    {
+        width: 100px;
+    }
+
+    span {
+        color: #fff;
+        font-family: 'Roboto';
+        font-size: 16px;
+
+        margin-top: 10px;
+    }
+}
+
