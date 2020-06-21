@@ -1,41 +1,11 @@
 @import "./../../Mixins.scss";
 
-nav.nav
+.logo
 {
-	height: 100%;
+	width: 100%;
+	margin-top: 15px;
 
-	background-color: #373737;
+	text-align: center;
 
-	@include flex(column nowrap, flex-start, flex-start);
-
-	a.menuItem
-	{
-		font-family: "Roboto", sans-serif;
-		font-size: 18px;
-
-		display: block;
-
-		width: 100%;
-		margin-top: 10px;
-		padding: 10px;
-
-		transition: all 0.3s;
-		text-align: center;
-
-		color: #FFFFFF;
-		background-color: #6B6B6B;
-	}
-
-	a.menuItem:last-of-type
-	{
-		margin-top: auto;
-		padding: 20px;
-
-		text-transform: uppercase;
-	}
-
-	a.menuItemActive
-	{
-		background-color: #23A3FF;
-	}
+	color: #FFFFFF;
 }
