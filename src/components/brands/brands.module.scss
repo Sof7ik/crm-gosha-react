@@ -1,0 +1,11 @@
+@import "./../../Mixins.scss";
+
+div.brandsPageWrapper
+{
+    @include flex(column nowrap, flex-start, flex-start);
+}
+
+div.brandsWrapper
+{
+    @include flex(row wrap, flex-start, flex-start);
+}

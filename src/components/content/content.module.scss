@@ -1,0 +1,16 @@
+@mixin grid ($gtr, $gtc, $gg) {
+    display: grid;
+    grid-template-rows: $gtr;
+    grid-template-columns: $gtc;
+    grid-gap: $gg;
+}
+
+div.content
+{
+    background-color: #D6D6D6;
+
+    padding: 10px;
+
+    @include grid(1fr, 1fr 8fr, 0px);
+    width: 100%;
+}

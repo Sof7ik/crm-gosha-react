@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./SearchElem.module.css";
+import styles from "./searchElem.module.scss";
 
 import OptionElem from './OptionElem/OptionElem';
 

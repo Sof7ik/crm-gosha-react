@@ -1,0 +1,11 @@
+@import "./../../../../Mixins.scss";
+
+input[type="search"]
+{
+	width: 300px;
+	padding: 7px;
+
+	border: 1px solid #848484;
+	border-radius: 0.3rem;
+	outline: none;
+}

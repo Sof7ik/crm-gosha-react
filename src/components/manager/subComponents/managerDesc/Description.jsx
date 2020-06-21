@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Description.module.css";
+import styles from "./description.module.scss";
 
 export default function Descriptor(props) {
     return (

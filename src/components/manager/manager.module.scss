@@ -1,0 +1,20 @@
+@import "./../../Mixins.scss";
+
+div.avatarWrapper
+{
+    width: 359px;
+    height: 400px;
+
+    background-color: #4D4D4D;
+}
+
+div.description
+{
+    @include flex(column nowrap, flex-start, center);
+    width: 100%;
+}
+
+div.avaDescWrapper
+{
+    @include flex(column nowrap, flex-start, flex-start);
+}

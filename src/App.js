@@ -1,20 +1,21 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import styles from './Style.module.css';
+import './Base.scss';
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
 
 // ======== components ========
-import Header from './components/header/Header';
 import Content from './components/content/Content';
+import Sidebar from './components/sidebar/Sidebar';
 // ======== components ========
 
 function App() {
   return (
-	<div className={`${styles.wrapper}`}>
-		<Header image="./components/header/img/Logo.png"/>
-		<BrowserRouter>
-			<Content />
-		</BrowserRouter>
-	</div>
+	<BrowserRouter>
+		<Sidebar/>
+
+		<Content />
+	</BrowserRouter>
   );
 }
 

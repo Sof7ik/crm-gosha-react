@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Brand.module.css";
+import styles from "./brand.module.scss";
 
 export default function Brand (props) {
     return(

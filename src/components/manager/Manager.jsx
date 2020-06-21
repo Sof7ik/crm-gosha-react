@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Manager.module.css";
+import styles from "./manager.module.scss";
 
 import Descriptor from './subComponents/managerDesc/Description';
 
