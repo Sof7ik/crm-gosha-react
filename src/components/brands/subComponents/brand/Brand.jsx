@@ -1,11 +1,18 @@
 import React from 'react';
 import styles from "./brand.module.scss";
 
+import { Card } from 'antd';
+
+const { Meta } = Card;
+
 export default function Brand (props) {
     return(
-        <div className={`${styles.brandWrapper}`}>
-            <img src={`${props.imageURL}`} alt="brand-logo"></img>
-            <span>{`${props.brandName}`}</span>
-        </div>
+        <Card
+            hoverable
+            style={{ width: '100%' }}
+            cover={<img alt={`${props.brandName}`} src={`${props.imageURL}`} />}
+        >
+            <Meta title={`${props.brandName}`} description="www.instagram.com" />
+        </Card>
     )
 }

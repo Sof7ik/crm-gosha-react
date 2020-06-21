@@ -1,11 +1,53 @@
 @import "./../../Mixins.scss";
 
-div.brandsPageWrapper
-{
-    @include flex(column nowrap, flex-start, flex-start);
-}
-
 div.brandsWrapper
 {
-    @include flex(row wrap, flex-start, flex-start);
+    max-width: 1440px;
+    width: 100%;
+    @include grid(1fr, repeat(6, 1fr), 25px);
+}
+
+@media screen and (max-width: 1440px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(5, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(4, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(3, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(2, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 425px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(1, 1fr), 15px);
+    }
 }

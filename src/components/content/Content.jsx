@@ -11,7 +11,7 @@ import Brands from '../brands/Brands';
 
 export default function Content () {
     return(
-        <div className={`${styles.content}`}>
+        <div className={`${styles.container}`}>
                 <Route path="/manager"> <Manager /> </Route>
                 <Route path="/brands"> <Brands /> </Route>
                 {/* <Route path="/brands/goods"> <Goods /> </Route> */}

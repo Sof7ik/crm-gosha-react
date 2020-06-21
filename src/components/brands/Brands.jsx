@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from "./brands.module.scss";
+import { Input } from 'antd';
+
 
 // ======== components ========
 import Brand from './subComponents/brand/Brand';
 import SearchElem from './subComponents/searchElement/SearchElem';
 // ======== components ========
+
+const { Search } = Input;
 
 const brands = [
     ["https://placeimg.com/150/150/an", 'РЖД'],
@@ -69,8 +73,8 @@ const brands = [
 
 export default function Brands () {
     return (
-        <div className={`${styles.brandsPageWrapper}`}>
-            <SearchElem page="brands" placeholder="Введите название бренда"/>
+        <>
+            <Search placeholder="Начните вводить бренд" enterButton style={{marginBottom: '25px', maxWidth: '600px'}} />
 
             <div className={styles.brandsWrapper}>
                 {brands.map( (elem, i) => {
@@ -79,6 +83,6 @@ export default function Brands () {
                 })}
             </div>
         
-        </div>
+        </>
     )
 }
