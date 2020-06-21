@@ -2,9 +2,9 @@
 
 div.brandsWrapper
 {
-    max-width: 1440px;
     width: 100%;
-    @include grid(1fr, repeat(6, 1fr), 25px);
+    @include grid(1fr, repeat(6, 1fr), 15px);
+    max-width: 1440px;
 }
 
 @media screen and (max-width: 1440px)
@@ -16,16 +16,7 @@ div.brandsWrapper
     }
 }
 
-@media screen and (max-width: 1024px)
-{
-    div.brandsWrapper
-    {
-        width: 100%;
-        @include grid(1fr, repeat(4, 1fr), 15px);
-    }
-}
-
-@media screen and (max-width: 800px)
+@media screen and (max-width: 1224px)
 {
     div.brandsWrapper
     {
@@ -34,7 +25,7 @@ div.brandsWrapper
     }
 }
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 900px)
 {
     div.brandsWrapper
     {
@@ -43,11 +34,20 @@ div.brandsWrapper
     }
 }
 
-@media screen and (max-width: 425px)
+@media screen and (max-width: 700px)
 {
     div.brandsWrapper
     {
         width: 100%;
-        @include grid(1fr, repeat(1, 1fr), 15px);
+        @include grid(1fr, repeat(2, 1fr), 10px);
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, 1fr, 15px);
     }
 }

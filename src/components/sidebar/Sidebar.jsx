@@ -18,14 +18,29 @@ class Sidebar extends React.Component
           this.onCollapse = collapsed => {
             this.setState({ collapsed });
           };    
+          window.addEventListener("resize", () => {
+            if (window.innerWidth <= 600)
+            {
+                this.setState({ collapsed: true })
+            }
+        });
+    }
+
+    componentWillMount() {
+
+        if (window.innerWidth <= 600)
+        {
+            this.state.collapsed = true;
+        }
     }
 
     render()
     {
         return (
         <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
-            <h2 className={styles.logo}> CRM </h2>
+            
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+
                 <Menu.Item key="1" icon={<UserOutlined />}>
                     <NavLink to="/manager" className={`${styles.menuItem}`} activeClassName={`${styles.menuItemActive}`}> Личный кабинет </NavLink>
                 </Menu.Item>

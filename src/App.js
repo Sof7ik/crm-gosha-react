@@ -5,6 +5,7 @@ import 'antd/dist/antd.css';
 import { Layout } from 'antd';
 
 // ======== components ========
+import Header from './components/header/Header';
 import Content from './components/content/Content';
 import Sidebar from './components/sidebar/Sidebar';
 // ======== components ========
@@ -12,9 +13,11 @@ import Sidebar from './components/sidebar/Sidebar';
 function App() {
   return (
 	<BrowserRouter>
-		<Sidebar/>
-
-		<Content />
+		<Header/>
+		<div id="wrapper">
+			<Sidebar/>
+			<Content />
+		</div>
 	</BrowserRouter>
   );
 }
