@@ -6,7 +6,7 @@ import {Route} from 'react-router-dom';
 import Manager from '../manager/Manager';
 import Brands from '../brands/Brands';
 // import Goods from '../goods/Goods';
-// import Bloggers from '../bloggers/Bloggers';
+import Bloggers from '../bloggers/Bloggers';
 // ======== components ========
 
 export default function Content () {
@@ -15,7 +15,7 @@ export default function Content () {
                 <Route path="/manager"> <Manager /> </Route>
                 <Route path="/brands"> <Brands /> </Route>
                 {/* <Route path="/brands/goods"> <Goods /> </Route> */}
-                {/* <Route path="/bloggers"> <Bloggers /> </Route> */}
+                <Route path="/bloggers"> <Bloggers /> </Route>
         </div>
     )
     

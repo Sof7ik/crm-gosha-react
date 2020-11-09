@@ -71,18 +71,33 @@ const brands = [
     ["https://placeimg.com/150/150/an", 'Eni'],
 ]
 
-export default function Brands () {
-    return (
-        <>
-            <Search placeholder="Начните вводить бренд" enterButton style={{marginBottom: '25px', maxWidth: '600px'}} />
+export default class Brands extends React.Component {
 
-            <div className={styles.brandsWrapper}>
-                {brands.map( (elem, i) => {
-                    // console.log(elem[0], elem[1]);
-                    return <Brand key={`${i}`} imageURL={`${elem[0]}`} brandName={`${elem[1]}`}/>
-                })}
-            </div>
-        
-        </>
-    )
+    constructor (props) {
+        super(props);
+        this.state = {
+            brands: []
+        }
+    }
+
+    async componentDidMount () {
+    }
+
+    render()
+    {
+        return (
+            <>
+                <Search placeholder="Начните вводить бренд" enterButton style={{marginBottom: '25px', maxWidth: '600px'}} />
+    
+                <div className={styles.brandsWrapper}>
+                    {brands.map( (elem, i) => {
+                        // console.log(elem[0], elem[1]);
+                        return <Brand key={`${i}`} imageURL={`${elem[0]}`} brandName={`${elem[1]}`}/>
+                    })}
+                </div>
+            
+            </>
+        )
+    }
+    
 }
