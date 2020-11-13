@@ -28,7 +28,15 @@ export default class Bloggers extends React.Component {
 
                 {
                     this.state.bloggers.map( (blogger, index) => {
-                        return <Blogger name={blogger.name} index={index}/>
+                        console.log(blogger);
+                        return <Blogger
+                                key={index} 
+                                image='https://via.placeholder.com/140x140'
+                                name={blogger.name}
+                                surname=''
+                                email={blogger.email}
+                                zip={blogger.address.zipcode}
+                                website={blogger.website}/>
                     })
                 }
             </div>

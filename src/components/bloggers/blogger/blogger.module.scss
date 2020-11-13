@@ -1,15 +1,61 @@
 div.blogger
 {
+    background-color: #848484;
 
-    height: 150px;
-    width: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
 
-    border: 1px solid blue;
+    padding: 10px;
+}
 
-    background-color: green;
+div.bloggerAvatar
+{
+    width: 120px;
+    height: 120px;
 
-    p.bloggerName
-    {
-        color: red;
-    }
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    border-radius: 100%;
+}
+
+div.bloggerInfo, div.bloggerSocial
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+div.bloggerInfo
+{
+    margin-left: 30px;
+}
+
+div.bloggerSocial
+{
+    margin-left: 30px;
+}
+
+span.bloggerName, span.email, span.zip, span.website
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: #fff;
+}
+
+span.bloggerName
+{
+    font-weight: bold;
+}
+
+span.email, span.zip, span.website
+{
+    font-weight: normal;
 }

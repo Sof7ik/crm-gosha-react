@@ -1,6 +1,8 @@
 div.bloggersWrapper
 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 50px;
+
+    width: 100%;
 }
