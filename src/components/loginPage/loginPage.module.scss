@@ -1,0 +1,26 @@
+div.loginWrapper
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.input
+{
+    outline: none;
+    width: 400px;
+    padding: 3px;
+
+    margin-bottom: 15px;
+}
+
+.button
+{
+    padding: 10px;
+    border: 1px solid blue;
+    color: #000;
+    background-color: #fff;
+}

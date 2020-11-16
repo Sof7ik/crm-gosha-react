@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { ProfileOutlined, UserOutlined, TeamOutlined, TagOutlined} from '@ant-design/icons';
 
-const { Header, Sider, Content } = Layout;
+const  {Sider} = Layout;
 
 class Sidebar extends React.Component
 {
@@ -30,7 +30,7 @@ class Sidebar extends React.Component
 
         if (window.innerWidth <= 600)
         {
-            this.state.collapsed = true;
+            this.setState({collapsed: true})
         }
     }
 

@@ -30,7 +30,7 @@ class Database
     }
 
     
-    public static function select(string $table, string $selector = '*', string $conditionTemplate = '', array $embeddedData)
+    public static function select(string $table, string $selector = '*', string $conditionTemplate = '', array $embeddedData = [])
     {
         $connection = static::getConnection();
 
