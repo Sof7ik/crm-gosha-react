@@ -1,0 +1,30 @@
+@import './../../../Mixins.scss';
+
+div.bloggersWrapper
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 50px;
+
+    width: 100%;
+
+    transition: all .3s;
+
+    margin-top: 20px;
+}
+
+@media all and (max-width: 1540px)
+{
+    div.bloggersWrapper
+    {
+        @include grid(1fr, repeat(2, 1fr), 40px 50px)
+    }
+}
+
+@media all and (max-width: 940px)
+{
+    div.bloggersWrapper
+    {
+        @include grid(1fr, 1fr, 40px 50px)
+    }
+}

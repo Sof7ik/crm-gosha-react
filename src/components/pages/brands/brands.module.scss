@@ -1,0 +1,53 @@
+@import "./../../../Mixins.scss";
+
+div.brandsWrapper
+{
+    width: 100%;
+    @include grid(1fr, repeat(6, 1fr), 15px);
+    max-width: 1440px;
+}
+
+@media screen and (max-width: 1440px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(5, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 1224px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(3, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(2, 1fr), 15px);
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, repeat(2, 1fr), 10px);
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    div.brandsWrapper
+    {
+        width: 100%;
+        @include grid(1fr, 1fr, 15px);
+    }
+}

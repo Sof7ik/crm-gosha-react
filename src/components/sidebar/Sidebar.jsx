@@ -2,7 +2,8 @@ import React from 'react';
 import styles from "./sidebar.module.scss";
 import { NavLink } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
-import { ProfileOutlined, UserOutlined, TeamOutlined, TagOutlined} from '@ant-design/icons';
+import {UserOutlined, TeamOutlined, TagOutlined} from '@ant-design/icons';
+//ProfileOutlined
 
 const  {Sider} = Layout;
 
@@ -26,7 +27,7 @@ class Sidebar extends React.Component
         });
     }
 
-    componentWillMount() {
+    componentDidMount() {
 
         if (window.innerWidth <= 600)
         {
@@ -37,7 +38,7 @@ class Sidebar extends React.Component
     render()
     {
         return (
-        <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
+        <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse} className={styles.sidebar}>
             
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
 
@@ -50,9 +51,9 @@ class Sidebar extends React.Component
                 </Menu.Item>
                     
 
-                <Menu.Item key="3" icon={<ProfileOutlined />}>
+                {/* <Menu.Item key="3" icon={<ProfileOutlined />}>
                     <NavLink to="/goods" className={`${styles.menuItem}`} activeClassName={`${styles.menuItemActive}`}>Товары</NavLink>
-                </Menu.Item>
+                </Menu.Item> */}
 
                 <Menu.Item key="4" icon={<TeamOutlined />}>
                     <NavLink to="/bloggers" className={`${styles.menuItem}`} activeClassName={`${styles.menuItemActive}`}>Блоггеры</NavLink>

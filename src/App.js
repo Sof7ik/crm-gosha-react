@@ -1,33 +1,29 @@
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React, {useEffect, useCallback} from 'react';
+import { BrowserRouter} from 'react-router-dom';
 import './Base.scss';
 import 'antd/dist/antd.css';
 
 // ======== components ========
 import Header from './components/header/Header';
-import Content from './components/content/Content';
-import Sidebar from './components/sidebar/Sidebar';
-import LoginPage from './components/loginPage/LoginPage';
 // ======== components ========
 
-import {useLogin} from './state/state';
+import {useRoutes} from './routes.js';
+import {useLoginState} from './state/state';
 
 function App() {
-  return (
-	<BrowserRouter>
-		<Header/>
+	const routes = useRoutes(false);
+	return (
+		<BrowserRouter>
+			<Header/>
 
-		<div id="wrapper">
-			<Route exact path='/'> <LoginPage/> </Route> 	
+			<div id="wrapper">
+				{
+					routes
+				}
+			</div>
 			
-			<Route path='/content'>
-				<Sidebar/>
-				<Content />
-			</Route>
-		</div>
-		
-	</BrowserRouter>
-  );
+		</BrowserRouter>
+  	);
 }
 
 export default App;

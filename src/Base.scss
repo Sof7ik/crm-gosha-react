@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './Mixins.scss';
 
 *, *::before, *::after
 {
@@ -36,9 +37,72 @@ ul
 
 #wrapper
 {
-	min-height: 100vh;
+	// min-height: 100vh;
 	display: flex;
 	flex-flow: row nowrap;
+}
+
+.wrapper
+{
+	@include flex(column nowrap, flex-start, flex-start);
+	padding: 10px 0 0 10px;
+	width: 100%;
+}
+
+input[type="submit"], button
+{
+	@extend %nullInputs;
+
+	padding: 0 16px;
+
+	min-width: 64px;
+	min-height: 36px;
+
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff !important;
+	background-color: dodgerblue;
+
+	transition: all .3s;
+
+	&:hover
+	{
+		background-color: deepskyblue;
+	}
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+{
+	@extend %nullInputs;
+
+	border-radius: 5px 5px 0 0;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-bottom: 2px solid #c4c4c4;
+
+	background-color: #e8e8e8;
+
+	padding: 10px 0 5px 10px;
+
+	&:hover
+	{
+		border-bottom: 2px solid #000;
+		background-color: #ccc;
+	}
+
+	&:focus
+	{
+		border-bottom-color: dodgerblue;
+	}
+}
+
+.searchinput
+{
+	margin-bottom: 25px;
+	max-width: 600px;
 }
 
 @media screen and (max-width: 600px)
