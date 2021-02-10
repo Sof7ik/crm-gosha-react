@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback} from 'react';
+import React from 'react';
 import { BrowserRouter} from 'react-router-dom';
 import './Base.scss';
 import 'antd/dist/antd.css';
@@ -8,10 +8,9 @@ import Header from './components/header/Header';
 // ======== components ========
 
 import {useRoutes} from './routes.js';
-import {useLoginState} from './state/state';
 
 function App() {
-	const routes = useRoutes(false);
+	const routes = useRoutes(true);
 	return (
 		<BrowserRouter>
 			<Header/>
@@ -21,9 +20,9 @@ function App() {
 					routes
 				}
 			</div>
-			
+
 		</BrowserRouter>
-  	);
+	);
 }
 
 export default App;

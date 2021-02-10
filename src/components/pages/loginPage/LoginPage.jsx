@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
 import styles from './loginPage.module.scss';
-import FetchData from "../../../FetchData/fetchData";
-
-const fetchData = new FetchData();
 
 const LoginPage = (props) => {
 
@@ -12,39 +9,6 @@ const LoginPage = (props) => {
 
     const changeFormDataHandler = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value});
-    }
-
-    const login = async (e) =>
-    {
-        console.log(formData);
-        if (formData.email.trim() !== '')
-        {
-            if (formData.password.trim() !== '')
-            {
-                setTimeout(()=> {
-                    fetchData.getUsers()
-                        .then(users => {
-                            console.log('users',users)
-                            users.forEach( (user,index) => {
-                                if (user.email === formData.email && user.password === formData.password)
-                                {
-                                    console.log(`Пользователь авторизовался. Имя - ${user.name}, фамилия - ${user.surname}`);
-                                }
-                                else if(index === users.length-1)
-                                {
-                                    console.log('Введены некоректные данные');
-                                }
-                            })
-                        })
-                }, 1000)
-            } else
-            {
-              console.log('Пустой пароль');
-            }
-        } else
-        {
-            console.log('Пустой email');
-        }
     }
 
     return(
@@ -71,7 +35,7 @@ const LoginPage = (props) => {
                 onChange={changeFormDataHandler}
                 autoComplete="off"/>
 
-            <input type="submit" onClick={login} disabled={fetchData.isLoading} value="ВОЙТИ"/>
+            <input type="submit" value="ВОЙТИ"/>
         </div>
     )   
 }

@@ -16,7 +16,7 @@ export const Bloggers = props => {
        fetchData.getBloggers().then(data => {
             setBloggers([...data]);
         })
-    }, [])
+    }, [fetchData])
 
     const { Search } = Input;
     return (
