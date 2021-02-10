@@ -7,21 +7,25 @@ import 'antd/dist/antd.css';
 import Header from './components/header/Header';
 // ======== components ========
 
+import Authcontext from "./context/AuthContext";
+
 import {useRoutes} from './routes.js';
 
 function App() {
-	const routes = useRoutes(true);
+	const routes = useRoutes(false);
 	return (
-		<BrowserRouter>
-			<Header/>
+		<Authcontext.Provider value={{id: 1}}>
+			<BrowserRouter>
+				<Header/>
 
-			<div id="wrapper">
-				{
-					routes
-				}
-			</div>
+				<div id="wrapper">
+					{
+						routes
+					}
+				</div>
 
-		</BrowserRouter>
+			</BrowserRouter>
+		</Authcontext.Provider>
 	);
 }
 

@@ -5,6 +5,8 @@ export default class FetchData {
     isLoading = false;
 
     getResource = async (url, method = 'GET', body = null, headers = {}) => {
+        console.log(url)
+
         this.isLoading = true;
 
         const res = await fetch(url, {
@@ -56,8 +58,11 @@ export default class FetchData {
 
         console.log('data', data);
 
-        return await this.getResource(`${this.baseUrl}users`,
-            "POST", JSON.stringify(data), {'Content-Type': 'application/json'});
+        // return await this.getResource(`${this.baseUrl}users/login`,
+        //     "POST", data);
+
+            return await this.getResource(`http://f0490278.xsph.ru/api/users/login`,
+            "POST", data);
 
     }
 }

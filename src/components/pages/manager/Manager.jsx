@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from "./manager.module.scss";
 
 import Descriptor from './subComponents/managerDesc/Description';
+import AuthContext from "../../../context/AuthContext";
+
+
 
 export default function Manager () {
+    const Authcontext = useContext(AuthContext);
+
+    console.log(Authcontext.id);
+
     return (
         <div className="wrapper">
             <div className={`${styles.avaDescWrapper}`}>

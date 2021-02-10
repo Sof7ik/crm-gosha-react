@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import styles from './loginPage.module.scss';
+import FetchData from "../../../FetchData/fetchData";
 
 const LoginPage = (props) => {
+    const fetchData = new FetchData();
 
     const [formData, setFormData] = useState({
         email: '', password: ''
@@ -9,6 +11,12 @@ const LoginPage = (props) => {
 
     const changeFormDataHandler = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value});
+    }
+
+    const loginHandler = async e =>
+    {
+        const userInfo = await fetchData.getUserForLogin(formData);
+        console.log(userInfo);
     }
 
     return(
@@ -35,7 +43,7 @@ const LoginPage = (props) => {
                 onChange={changeFormDataHandler}
                 autoComplete="off"/>
 
-            <input type="submit" value="ВОЙТИ"/>
+            <input type="submit" value="ВОЙТИ" onClick={loginHandler}/>
         </div>
     )   
 }
