@@ -34,7 +34,7 @@ const LoginPage = (props) => {
                 onChange={changeFormDataHandler}
                 autoComplete="off"/>
             <input 
-                type="password" 
+                type="text"
                 name="password" 
                 id="userPassword" 
                 required

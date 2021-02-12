@@ -1,11 +1,12 @@
 export default class FetchData {
 
     baseUrl = 'http://f0490278.xsph.ru/api/';
-    // baseUrl = 'http://api.crm-gosha-react/api/';
     isLoading = false;
 
     getResource = async (url, method = 'GET', body = null, headers = {}) => {
         console.log(url)
+        console.log('method', method);
+        console.log('body', body)
 
         this.isLoading = true;
 
@@ -55,14 +56,12 @@ export default class FetchData {
     }
 
     getUserForLogin = async (data) => {
+        let formdata = new FormData();
 
-        console.log('data', data);
+        formdata.append("email", data.email);
+        formdata.append("password", data.password);
 
-        // return await this.getResource(`${this.baseUrl}users/login`,
-        //     "POST", data);
-
-            return await this.getResource(`http://f0490278.xsph.ru/api/users/login`,
-            "POST", data);
-
+        return await this.getResource(`${this.baseUrl}users/login`,
+            "POST", formdata);
     }
 }

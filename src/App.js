@@ -10,11 +10,14 @@ import Header from './components/header/Header';
 import Authcontext from "./context/AuthContext";
 
 import {useRoutes} from './routes.js';
+import {useAuth} from "./hooks/auth.hook";
 
 function App() {
-	const routes = useRoutes(false);
+    const {login, logout, token, userId} = useAuth()
+    const isAuthed = !!userId;
+	const routes = useRoutes(isAuthed);
 	return (
-		<Authcontext.Provider value={{id: 1}}>
+		<Authcontext.Provider value={{userId, token, login, logout}}>
 			<BrowserRouter>
 				<Header/>
 
